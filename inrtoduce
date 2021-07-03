@@ -1,0 +1,9 @@
+roscore	
+
+cd show_ws
+source devel/setup.bash 
+rosrun JoyStick joystick /dev/input/js0
+
+source devel/setup.bash
+sudo chmod 777 /dev/ttyACM0 
+rosrun move_robot move_robot /dev/ttyACM0 115200
